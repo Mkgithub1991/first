@@ -1,0 +1,44 @@
+# How to recover deleted file
+
+vim abc.txt
+git add .
+git commit -m  "abc.txt created"
+git push
+
+git log
+*check into GitHub account
+git rm abc.txt
+git add .
+git commit -m "abc.txt deleted"
+
+*check into GitHub account
+git log
+git --name-only <sha value>
+git checkout <sha value> <file name>
+git add .
+git commit -m "restore abc.txt"
+git push
+
+*check into GitHub account
+
+# Recover deleted file from GitHub
+
+choose repository
+choose file
+delete file
+commit file
+refresh
+history
+click on <sha value>
+Browse
+Raw
+Right click save as 
+
+*Problem
+git push ... error 
+git pull --rebase origin <branch name>
+
+again github history
+same procedure repeat
+git push from git
+
